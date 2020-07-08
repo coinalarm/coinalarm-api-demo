@@ -1,0 +1,20 @@
+{
+  "name": "coinalarm",
+  "version": "1.0.0",
+  "description": "CoinAlarm Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/coinalarm/coinalarm",
+  "keywords": [
+    "Electron",
+    "coin",
+    "desktop"
+  ],
+  "author": "William King",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.0"
+  }
+}
