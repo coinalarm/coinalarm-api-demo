@@ -5,8 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . coinalarm --platform win32 --arch x64 --out dist/",
-    "setup": "electron-installer-windows --src ./dist/coinalarm-win32-x64/ --dest ./dist/installers/"
+    "build-windows": "electron-packager . coinalarm --platform win32 --arch x64 --out dist/",
+    "build-macos": "electron-packager . coinalarm --platform darwin --arch x64 --out dist/",
+    "build-linux": "electron-packager . coinalarm --platform x86_64 --arch x64 --out dist/",
+    "setup-windows": "electron-installer-windows --src ./dist/coinalarm-win32-x64/ --dest ./dist/windows/",
+    "setup-macos": "electron-installer-dmg --src ./dist/coinalarm-darwin-x64/ --dest ./dist/macos/",
+    "setup-linux": "electron-installer-debian --src ./dist/coinalarm-x86_64-x64/ --dest ./dist/debian/"
   },
   "repository": "https://github.com/coinalarm/coinalarm",
   "keywords": [
@@ -18,7 +22,6 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.1.0",
-    "electron-installer-windows": "^3.0.0",
     "electron-packager": "^15.0.0"
   }
 }
