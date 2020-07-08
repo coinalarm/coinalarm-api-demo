@@ -4,7 +4,9 @@
   "description": "CoinAlarm Desktop Application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . coinalarm --platform win32 --arch x64 --out dist/",
+    "setup": "electron-installer-windows --src ./dist/coinalarm-win32-x64/ --dest ./dist/installers/"
   },
   "repository": "https://github.com/coinalarm/coinalarm",
   "keywords": [
@@ -16,6 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.1.0",
+    "electron-installer-windows": "^3.0.0",
     "electron-packager": "^15.0.0"
   }
 }
