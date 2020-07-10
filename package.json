@@ -2,7 +2,7 @@
   "name": "coinalarm",
   "version": "1.0.0",
   "description": "CoinAlarm Desktop Application",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "start": "electron .",
     "build-windows": "electron-packager . coinalarm --platform win32 --arch x64 --out dist/",
