@@ -5,6 +5,7 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    icon:'./html/assets/favicon.ico',
     width: 800,
     height: 600,
     webPreferences: {
